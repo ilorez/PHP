@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(192, 192, 192);
+
+  align-items: center;
+  padding: 20px;
+}
+h1 {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #424242;
+  background-color: #424242;
+  color: #242424;
+}
+td,
+th {
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  padding: 2vw;
+}
+th {
+  color: rgb(250, 70, 70);
+}

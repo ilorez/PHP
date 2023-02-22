@@ -32,9 +32,9 @@
         <tr>
 
             <td><?php echo chr($i);?></td>
-            <td><?php echo $i ?></td>
-            <td><?php echo chr($i+32) ?></td>
-            <td><?php echo $i+32 ?></td>
+            <td><?php echo $i; ?></td>
+            <td><?php echo chr($i+32); ?></td>
+            <td><?php echo $i+32 ;?></td>
 
         </tr>
         <?php } ?>

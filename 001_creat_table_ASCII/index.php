@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>This is ASCII Alpha Upper and lower</h1>
+    <h1>This is ASCII Alpha Upper and lower case:</h1>
     
     <table >
     <tr>

@@ -37,7 +37,7 @@
             <td><?php echo $i+32 ;?></td>
 
         </tr>
-        <?php } ?>
+        <?php }; ?>
 
 
     </table>

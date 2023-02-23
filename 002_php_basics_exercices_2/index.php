@@ -3,7 +3,7 @@
 <?php
     echo "______________exercices I:________________<br>";
     echo "______________1________________<br>";
-    $note = 12;
+    $note = rand(1,100);
     if($note>=18 && $note<=20){
         echo $note." E [18-20]<br>";
     }
@@ -27,15 +27,15 @@
 <?php
     echo "______________2________________<br>";
     echo "are ".$note." % 3 or 7:<br>";
-    echo ($note%3)||($note%7)? 1:0;
+    echo ($note%3===0)||($note%7===0)? 1:0;
     echo "<br>";
 ?>
 <!-- 3 -->
 <?php
     echo "______________3________________<br>";
     $operator= "*";
-    $nomber1 = 10;
-    $nomber2 = 11;
+    $nomber1 = rand(1,90);
+    $nomber2 = rand(1,90);
     switch ($operator){
         case "*":
             echo $nomber1 * $nomber2;
@@ -63,12 +63,18 @@
 <?php
     echo "______________exercices II:________________<br>";
     echo "______________1________________<br>";
-    $inital = 300;
+    $inital = rand(100,1000);
     $i = 0;
-    while ($i <= $inital) {
+    while (true) {
+        $r = rand(100,1000);
         $i++;
+        if($r===$inital){
+            break;
+        }
         
     }
+    echo "le nomber est ".$inital;
+    echo " .<br>";
     echo "le nomber d'iterations realisees aver while est ".$i;
     echo " .<br>";
 
@@ -76,9 +82,13 @@
     
     $i = 0;
     do {
+        $r = rand(100,1000);
         $i++;
+        if($r===$inital){
+            break;
+        }
         
-    }while($i <= $inital);
+    }while(true);
     echo "le nomber d'iterations realisees aver do while est ".$i;
     echo " .<br>";
     
@@ -88,13 +98,14 @@
 <!-- 2 -->
 <?php
     echo "______________2________________<br>";
-    $num_donne = 15;
+    $num_donne = rand(1,100);
     echo "Les multiples du nombre 3 enter ]0,$num_donne] est: <br>";
     for($i=1;$i<=$num_donne;$i++){
         if ($i%3==0){
-            echo $i."<br>";
+            echo $i." , ";
         }
     }
+    echo " <br>";
    
     
      
@@ -118,5 +129,5 @@
     }
     echo "<br>";
     
-     
+   
 ?>

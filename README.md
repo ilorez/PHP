@@ -1,4 +1,4 @@
-#WEB DYNAMIQUE
+# WEB DYNAMIQUE
 
 Welcome to Web Dynamique! This repository contains resources to help you learn web development from the ground up. 
 

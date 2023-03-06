@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <title>Get $ Post</title>
+  </head>
+  <body>
+    <form action="output.php" method="post" class="container">
+      <!-- name -->
+      <div class="form-group">
+        <label for="name" class="col-form-label">Name </label>
+        <input
+          type="name"
+          name="name"
+          id="name"
+          required
+          placeholder="Name"
+          class="form-control"
+        />
+      </div>
+      <!-- email -->
+      <div class="form-group">
+        <label for="email" class="col-form-label">Email </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+          class="form-control"
+        />
+      </div>
+      <!-- psw -->
+      <div class="form-group">
+        <label for="password" class="col-form-label">Password </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="password"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <button type="reset" class="btn ">Reset</button>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

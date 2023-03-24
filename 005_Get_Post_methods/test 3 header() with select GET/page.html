@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <title>Get $ Post</title>
+  </head>
+  <body>
+    <form action="trasfaire.php" method="get" class="container">
+      <!-- select -->
+      <div class="form-group">
+        <label for="indice" class="col-form-label">indice </label>
+        <input
+          type="number"
+          name="indice"
+          id="indice"
+          required
+          
+          class="form-control"
+        />
+        <select name="periode" class="form-control">
+            <option value="j">Bonjour</option>
+            <option value="s">Bonsoir</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <button type="reset" class="btn ">Reset</button>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -33,9 +33,9 @@
                 $valid = "True";
             }
             else{
-               $valid = "False";
+                $valid = "False";
             }
-            echo "<tr><td> ".$input_names[$i]."</td><td> ".$_POST[$input_names[$i]]."</td><td> ".$valid."</td></tr>";}
+            echo "<tr><td>".$input_names[$i]."</td><td> ".$_POST[$input_names[$i]]."</td><td> ".$valid."</td></tr>";}
         }
         
     ?>

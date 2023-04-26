@@ -41,3 +41,7 @@ $groupe_db = mysqli_query($db_c,"SELECT * FROM `groupe`")
     <input type="submit" name="submit" value="Envoye" />
     <a href="afficheSts.php"><input type="button" value="affiche Stagiaires"></a>
 </form>
+<?php
+    mysqli_free_result($groupe_db);
+    mysqli_close($db_c);
+?>

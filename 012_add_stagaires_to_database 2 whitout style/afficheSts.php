@@ -7,30 +7,14 @@ $sts = mysqli_query($db_c, "SELECT * FROM `stagaire`")
 <table border="1">
     <thead>
         <tr>
-            <th>
-                id
-            </th>
-            <th>
-                nom
-            </th>
-            <th>
-                prenom
-            </th>
-            <th>
-                date naissance
-            </th>
-            <th>
-                avatar
-            </th>
-            <th>
-                cv
-            </th>
-            <th>
-                Groupe
-            </th>
-            <th colspan="2">
-                Actions
-            </th>
+            <th>id</th>
+            <th>nom</th>
+            <th>prenom</th>
+            <th>date naissance</th>
+            <th>avatar</th>
+            <th> cv</th>
+            <th>Groupe</th>
+            <th colspan="2">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -57,3 +41,5 @@ $sts = mysqli_query($db_c, "SELECT * FROM `stagaire`")
 
     </tbody>
 </table>
+<a href="supToutSts.php " onclick="return confirm('If you click on \'OK\' you will DELETE all stagaires data!')"> <input
+        type="button" value="suprimme tout"></a>

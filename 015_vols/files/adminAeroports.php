@@ -36,9 +36,9 @@ $sel_tab = $sel->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <td><?=$idAe?></td>
                 <td><?=$nomAe?></td>
-                <td><a href="./editAeroport.php?id=<?=$idAe?>">Edit</a></td>
-                <td><a href="./suppAeroport.php?id=<?=$idAe?>"
-                        onclick="return confirm('by click yes you will delete <?=$nomAe?>!')">Sup</a></td>
+                <td><a href="./editAeroport.php?id=<?=$idAe?>" class="btn btn-warning">Edit</a></td>
+                <td><a href="./suppAeroport.php?id=<?=$idAe?>" class="btn btn-danger"
+                        onclick="return confirm('by click yes you will delete <?=$nomAe?>!')">Supp</a></td>
             </tr>
             <?php
     }

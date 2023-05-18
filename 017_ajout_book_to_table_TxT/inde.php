@@ -2,8 +2,26 @@
 if(isset($_POST["submit"])){
     extract($_POST);
     $row = "<tr><td>$genre</td><td>$auteur</td><td>$titre</td></tr>";
-    echo "<table class='table table-dark table-striped'>$row</table>";
-
+    #open file
+    $file_path = "./table.html";
+    $file = fopen($file_path,"r");
+    if ($file){
+        $file_size = filesize($file_path);
+        $text = fread($file,$file_size);
+        #close file
+        fclose($file);
+        $pstb = strpos($text,"</tbody>");
+        $deb = substr($text,0,$pstb );
+        $fin = substr($text,$pstb );
+        $sum ="$deb $row $fin";
+        $file = fopen($file_path,"w");
+        if ($file){
+            fwrite($file,$sum);
+            fclose($file);
+        }
+    }else{
+        echo "unnable to opoen this file";
+    }
 }
 ?>
 
@@ -42,7 +60,7 @@ if(isset($_POST["submit"])){
                 <input type="text" name="titre" id="titre" class="form-control">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Ajout</button>
+                <button type="submit" name="submit" class="btn btn-primary">Ajout</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
         </form>

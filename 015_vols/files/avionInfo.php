@@ -9,7 +9,7 @@
         // $places = $row['nombrePlace'];
         // $photoURL = $row['photo'];
         // $id = $row['idAvions'];
-        $vols = $db_c -> prepare("SELECT V.idVol as 'Numero vol' , A1.nomAeroport as 'Aeroport depart', A2.nomAeroport as 'Aeroport arrive', A3.nomAeroport as Escale FROM (((( vols as V LEFT JOIN aeroports as A1 on A1.idAeroport = V.aeroportDepart ) LEFT JOIN aeroports as A2 on A2.idAeroport = V.aeroportArrive ) LEFT JOIN escales as E on E.idVol = V.IdVol) LEFT JOIN aeroports as A3 on A3.idAeroport = E.idAeroport) WHERE V.idAvion = 20;");
+        $vols = $db_c -> prepare("SELECT V.idVol as 'Numero vol' , A1.nomAeroport as 'Aeroport depart', A2.nomAeroport as 'Aeroport arrive', A3.nomAeroport as Escale FROM (((( vols as V LEFT JOIN aeroports as A1 on A1.idAeroport = V.aeroportDepart ) LEFT JOIN aeroports as A2 on A2.idAeroport = V.aeroportArrive ) LEFT JOIN escales as E on E.idVol = V.IdVol) LEFT JOIN aeroports as A3 on A3.idAeroport = E.idAeroport) WHERE V.idAvion = $id;");
         $vols -> execute();
         // $vols->setFetchMode(PDO::FETCH_ASSOC);
         $tab = $vols->fetchAll(PDO::FETCH_ASSOC);

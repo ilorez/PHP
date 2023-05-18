@@ -6,6 +6,7 @@
         $sel = $db_c->prepare("SELECT `idAeroport`, `nomAeroport` FROM `aeroports` WHERE idAeroport=$id");
         $sel->execute();
         $sel_Aero = $sel->fetchAll(PDO::FETCH_ASSOC)[0];
+        $nom = $sel_Aero["nomAeroport"];
     }
     if(isset($_GET["submit"])){
         $id = $_GET["id"];
@@ -38,7 +39,7 @@
         <!-- nom aeroport  -->
         <div class="form-group">
             <label for="nomAeroport">Nom Aeroport:</label>
-            <input type="text" name="nomAeroport" id="nomAeroport" class="form-control" required />
+            <input type="text" name="nomAeroport" id="nomAeroport" class="form-control" value="<?=@$nom?>" required />
         </div>
         <!-- modifie and reset form  -->
         <div class="form-group mt-2 p-2">

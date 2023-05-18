@@ -65,7 +65,13 @@ alert("l'avion numero <?=$last_id?> est ajoute avec succes")
                 class="btn btn-primary p-2" />
             <input type="reset" name="reset" value="Reset" class="btn btn-secondary p-2" />
         </div>
+
+
+
     </form>
+    <div class="form-group mt-2 p-2">
+        <a class="btn btn-success" href="./afficheAvion.php"> Affiche avions </a>
+    </div>
     <script>
     function nbPlace() {
         const pl = parseInt(document.getElementById("places").value);

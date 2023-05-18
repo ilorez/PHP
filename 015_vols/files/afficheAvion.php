@@ -17,23 +17,29 @@
 </head>
 
 <body>
+    <div class="fl">
 
+        <div id="search" class="pb-3">
+            <h2>Nombre de place minimum</h2>
+            <div class="d-flex flex-row align-baseline ">
+                <input type="number" min="200" max="300" id="searchId" class=" w-25"
+                    class="justify-content-xl-center align-baseline">
+                <button onclick="search()" class="btn btn-success justify-content-xl-center align-baseline ms-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    search
+                </button>
+                <a class="btn btn-success ms-1" href="./insertion.php">Ajouter une avoin </a>
 
-    <div id="search" class="pb-3">
-        <h2>Nombre de place minimum</h2>
-        <div class="flex-row">
-            <input type="number" min="200" max="300" id="searchId" class=" w-25"
-                class="justify-content-xl-center align-baseline">
-            <button onclick="search()" class="btn btn-success justify-content-xl-center align-baseline">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-search"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                </svg>
-                search
-            </button>
+            </div>
+
         </div>
-
+        <!-- <div class="form-group mt-2 p-2">
+            <a class="btn btn-success" href="./insertion.php">Ajouter une avoin </a>
+        </div> -->
     </div>
     <table class="table table-dark table-striped text-center">
         <thead>
@@ -87,7 +93,7 @@
             }
             tr.removeAttribute("hidden")
         })
-        console.log(trs)
+        // console.log(trs)
     }
     </script>
 </body>

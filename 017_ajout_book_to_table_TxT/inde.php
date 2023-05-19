@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST["submit"])){
     extract($_POST);
-    $row = "<tr><td>$genre</td><td>$auteur</td><td>$titre</td></tr>";
+    $row = "<tr><td>".htmlentities($genre)."</td><td>".htmlentities($auteur)."</td><td>".htmlentities($titre)."</td></tr>";
     #open file
     $file_path = "./table.html";
     $file = fopen($file_path,"r");
@@ -14,11 +14,15 @@ if(isset($_POST["submit"])){
         $deb = substr($text,0,$pstb );
         $fin = substr($text,$pstb );
         $sum ="$deb $row $fin";
+        
         $file = fopen($file_path,"w");
         if ($file){
             fwrite($file,$sum);
             fclose($file);
+        header("location:table.html");
+
         }
+        // header("location:table.html");
     }else{
         echo "unnable to opoen this file";
     }

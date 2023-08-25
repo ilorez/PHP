@@ -9,7 +9,7 @@ if(isset($_GET["id"])){
     
     if($update){
         
-        echo '<script>window.close()</script>';
+        echo 'done';
     }else{
         echo "error in updating a task";
     }

@@ -43,7 +43,8 @@
                 ?>
                 <div class="task-row">
                     <div class="form-group task-checkbox">
-                        <input type="checkbox" onclick="cb_changed(this)" class="form-check-input" id="cb-<?=$id?>" <?php
+                        <input type="checkbox" onclick="cb_changed(event,this)" class="form-check-input"
+                            id="cb-<?=$id?>" <?php
                         if($state){
 
                             echo "checked";
@@ -84,23 +85,59 @@
 
     <!-- i added this script here because it's need loaded before called by onchage  -->
     <script>
-    function edit_state(inp) {
-        const id = inp.attributes.id.value.replace("cb-", "");
-        console.log(id)
-        link = "/PHP/020_ToDoList/backend/edit_state.php?id=" + id + "&state=" + inp.checked;
-        window.open(link, '_blank');
-
-    }
-
-    function cb_changed(inp) {
+    // add line-through to a label 
+    function add_lt(inp) {
         const label = inp.parentNode.children[1];
-
         if (inp.checked) {
             label.style.textDecoration = 'line-through';
         } else {
             label.style.textDecoration = 'none';
         }
-        edit_state(inp);
+    }
+
+    function executeInBackground(id, inp) {
+        var xhr = new XMLHttpRequest();
+
+        // Specify the PHP file's URL
+        var url = "/PHP/020_ToDoList/backend/edit_state.php?id=" + id + "&state=" + inp.checked;
+
+
+        // Open an asynchronous GET request to the PHP file
+        xhr.open("GET", url, true);
+
+
+        xhr.send();
+
+
+    }
+
+    function cb_changed(event, inp) {
+        const id = inp.getAttribute("id").replace("cb-", ""); // Corrected this line
+        add_lt(inp);
+        executeInBackground(id, inp);
+        if (event.shiftKey && inp.checked) {
+            const inputs = [...document.querySelector(".to-do-list").querySelectorAll("input[type='checkbox']")];
+
+
+            for (let i = inputs.length - 1; i >= 0; i--) { // Changed loop conditions and added 'let'
+                const inputId = inputs[i].getAttribute("id").replace("cb-", ""); // Corrected getting input ID
+
+                if (parseInt(inputId) < parseInt(id)) {
+
+                    if (inputs[i].checked) {
+
+                        return;
+                    } else {
+                        inputs[i].checked = true;
+                        add_lt(inputs[i]);
+                        executeInBackground(inputId, inputs[i]);
+
+                    }
+                }
+            }
+
+        }
+
 
     }
     </script>

@@ -44,4 +44,5 @@ $groupe_db = mysqli_query($db_c,"SELECT * FROM `groupe`")
 <?php
     mysqli_free_result($groupe_db);
     mysqli_close($db_c);
+    
 ?>

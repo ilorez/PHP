@@ -1,7 +1,7 @@
 <?php
     $c_name = "visits";
     $new_c_value = date("d-m-Y H:i:s", time());
-    $expiration = time() + (3600);
+    $expiration = time() + (3600*24);
 
     if(!isset($_COOKIE[$c_name])){
         setcookie($c_name,$new_c_value,$expiration);
@@ -9,9 +9,9 @@
     }
     else{
     $value = $_COOKIE[$c_name];
-    $convert_tab = explode(",",$value);
+    $convert_tab = explode("#",$value);
     array_push($convert_tab,$new_c_value);
-    $convert_str = implode(",",$convert_tab);
+    $convert_str = implode("#",$convert_tab);
     setcookie($c_name,$convert_str,$expiration);
     $fois = count($convert_tab);
     $message = "<h4 class='list-title'>Vous avez consulte cette page $fois fois, voice les details:</h4><ul>";
@@ -21,6 +21,7 @@
     $message .= "</ul>";
         
 }
+    
     echo $message;
 
 

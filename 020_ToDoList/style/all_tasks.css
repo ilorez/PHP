@@ -1,0 +1,14 @@
+.tdl-background .to-do-list{
+    height: 100%;
+}
+.date-p{
+    margin-left: 10px;
+    color: rgb(29, 31, 28);
+}
+.date-p span{
+    
+    color: rgb(54, 141, 36);
+}
+.task-inp-lbl{
+    margin-left: 1rem !important;
+}

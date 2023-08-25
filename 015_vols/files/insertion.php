@@ -9,7 +9,7 @@
     $timestamp = time();
     $file_ext = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
     $photoURL = "./avionsImg/$timestamp".".$file_ext";
-
+    
     $ajout_req = $db_c->prepare("INSERT INTO `avions`(`idAvions`, `categorieAvion`, `nombrePlace`, `photo`) VALUES (NULL,'$categorieAvion','$nombrePlace','$photoURL')");
     $ajout_req -> execute();
     if($ajout_req){

@@ -1,0 +1,88 @@
+html{
+    font-size: 16px;
+}
+*,::after,::before{
+    margin: 0 !important;
+}
+
+
+/* main  */
+main{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+/* backgroud  */
+.tdl-background{
+    padding: 1rem;
+    background-color: hsla(0, 0%, 47%, 0.11);
+    box-shadow: 2px 5px 30px hsla(0, 0%, 31%, 0.205);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80vw;
+    height: 75vh;
+    border-radius: 0.5rem;
+    
+
+}
+.date-p{
+    margin: 0;
+    color: rgb(104, 104, 104);
+}
+/* to do list  */
+.tdl-background .to-do-list{
+    background-color: hsla(0, 1%, 48%, 0.233);
+    box-shadow: 2px 5px 30px hsla(0, 0%, 31%, 0.308);
+
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    height: 80%;
+    border-radius: 0.5rem;
+    overflow: scroll;
+
+}
+.tdl-background .to-do-list div{
+    display: flex;
+    align-items:center;
+    padding-top: 0.1rem;
+}
+
+.tdl-background .to-do-list .task-row{
+    justify-content: space-between;
+    
+}
+.tdl-background .to-do-list .task-checkbox label{
+    padding-left: 0.5rem ;
+    color: rgb(56, 56, 56);
+}
+.tdl-background .to-do-list .task-checkbox label::first-letter{
+    text-transform: uppercase;
+}
+.tdl-background .to-do-list .task-checkbox label::after{
+    content: ".";
+}
+.tdl-background .to-do-list .task-action{
+    gap: 4%;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+/* the "Add" button  */
+.tdl-background .div-add-button{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+.tdl-background .div-add-button button{
+    width: 30%;
+}
+/* footer{
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 56);
+} */

@@ -4,11 +4,16 @@
     font-size: 15px;
     line-height: 24px;
     color: #737373;
+    gap: 1rem;
 }
-
+.row{
+    justify-content: space-between;
+}
 .site-footer hr {
     border-top-color: #bbb;
-    opacity: 0.5
+    opacity: 0.5;
+    margin: 1rem;
+    
 }
 
 .site-footer hr.small {

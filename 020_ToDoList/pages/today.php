@@ -6,25 +6,25 @@
     $tasks -> execute();
     $tab = $tasks->fetchAll(PDO::FETCH_ASSOC);
     // print_r($tab);
+    $IPath = $_SERVER["DOCUMENT_ROOT"]."/PHP/020_ToDoList";
     
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../000_bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/PHP/020_ToDoList/style/footer_style.css">
-
+    <?php   
+        include ($IPath."/assets/php/head.html");
+        
+?>
     <!-- style main section -->
     <link rel="stylesheet" href="../style/main_section.css">
-    <title>ToDoList</title>
+
+    <title>Today</title>
 </head>
 
 <body>
-    <?php   $IPath = $_SERVER["DOCUMENT_ROOT"]."/PHP/020_ToDoList";
+    <?php  
         include ($IPath."/assets/php/header.html");
 ?>
 

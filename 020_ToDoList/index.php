@@ -5,61 +5,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/PHP/020_ToDoList/000_bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/PHP/020_ToDoList/style/footer_style.css">
 
     <?php   
         include ($IPath."/assets/php/head.html");
         
 ?>
-    <title>ToDoList</title>
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-    }
-
-    .main-section {
-        max-width: 800px;
-        margin: 2em auto;
-        padding: 2em;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-
-    h1 {
-        color: #444;
-        font-size: 2.5em;
-        margin-bottom: 0.5em;
-    }
-
-    h2 {
-        color: #333;
-        font-size: 1.8em;
-        margin-top: 1.5em;
-    }
-
-    p {
-        font-size: 1.1em;
-        line-height: 1.6;
-        margin-top: 1em;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: 1.5em 0;
-        border-radius: 5px;
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    </style>
+    <title>Home</title>
+    <link rel="stylesheet" href="./style/home_page.css">
 </head>
 
 <body>

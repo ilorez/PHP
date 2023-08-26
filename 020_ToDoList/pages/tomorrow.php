@@ -80,7 +80,7 @@
 ?>
 
     <script src="/PHP/020_ToDoList/scripts/tomorrow_page_scripts.js"></script>
-    <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script> -->
 
 
 

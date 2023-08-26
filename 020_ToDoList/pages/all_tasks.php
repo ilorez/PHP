@@ -91,7 +91,7 @@
 ?>
 
 
-    <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script> -->
 
 </body>
 

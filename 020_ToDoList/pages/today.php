@@ -58,10 +58,10 @@
                     </div>
                     <div class="task-action">
                         <button class="btn btn-warning" onclick="edit_fn(this)" data_id="<?=$id?>"
-                            data_value="<?=$value?>">Edit</button>
+                            data_value="<?=$value?>"><i class="fa-solid fa-pen-to-square"></i></button>
                         <a onclick="return confirm('are u sure, you want delete this task ?')"
-                            href="/PHP/020_ToDoList/backend/del.php?id=<?=$id?>"><button
-                                class="btn btn-danger">Del</button></a>
+                            href="/PHP/020_ToDoList/backend/del.php?id=<?=$id?>"><button class="btn btn-danger"><i
+                                    class="fa-solid fa-trash"></i></button></a>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                 <!-- ------------------- -->
             </div>
             <div class="div-add-button">
-                <button class="btn btn-primary" id="add-btn">Add</button>
+                <button class="btn btn-primary" id="add-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
             </div>
         </section>
     </main>
@@ -80,7 +80,7 @@
 ?>
 
     <script src="/PHP/020_ToDoList/scripts/today_page_scripts.js"></script>
-    <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script> -->
 
 
     <!-- i added this script here because it's need loaded before called by onchage  -->

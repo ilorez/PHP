@@ -58,7 +58,8 @@
                     </div>
                     <div class="task-action">
                         <button class="btn btn-warning" onclick="edit_fn(this)" data_id="<?=$id?>"
-                            data_value="<?=$value?>"><i class="fa-solid fa-pen-to-square"></i></button>
+                            data_value="<?=$value?>" data_site="today"><i
+                                class="fa-solid fa-pen-to-square"></i></button>
                         <a onclick="return confirm('are u sure, you want delete this task ?')"
                             href="/PHP/020_ToDoList/backend/del.php?id=<?=$id?>"><button class="btn btn-danger"><i
                                     class="fa-solid fa-trash"></i></button></a>
@@ -71,7 +72,8 @@
                 <!-- ------------------- -->
             </div>
             <div class="div-add-button">
-                <button class="btn btn-primary" id="add-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
+                <button class="btn btn-primary" id="add-btn" data_date=<?=$today?>><i
+                        class="fa-sharp fa-solid fa-plus"></i></button>
             </div>
         </section>
     </main>
@@ -79,68 +81,8 @@
         include ("../assets/php/footer.html");
 ?>
 
-    <script src="/PHP/020_ToDoList/scripts/today_page_scripts.js"></script>
-    <!-- <script src="/PHP/020_ToDoList/000_bootstrap/js/bootstrap.bundle.js"></script> -->
+    <script src="/PHP/020_ToDoList/scripts/scripts.js"></script>
 
-
-    <!-- i added this script here because it's need loaded before called by onchage  -->
-    <script>
-    // add line-through to a label 
-    function add_lt(inp) {
-        const label = inp.parentNode.children[1];
-        if (inp.checked) {
-            label.style.textDecoration = 'line-through';
-        } else {
-            label.style.textDecoration = 'none';
-        }
-    }
-
-    function executeInBackground(id, inp) {
-        var xhr = new XMLHttpRequest();
-
-        // Specify the PHP file's URL
-        var url = "/PHP/020_ToDoList/backend/edit_state.php?id=" + id + "&state=" + inp.checked;
-
-
-        // Open an asynchronous GET request to the PHP file
-        xhr.open("GET", url, true);
-
-
-        xhr.send();
-
-
-    }
-
-    function cb_changed(event, inp) {
-        const id = inp.getAttribute("id").replace("cb-", ""); // Corrected this line
-        add_lt(inp);
-        executeInBackground(id, inp);
-        if (event.shiftKey && inp.checked) {
-            const inputs = [...document.querySelector(".to-do-list").querySelectorAll("input[type='checkbox']")];
-
-
-            for (let i = inputs.length - 1; i >= 0; i--) { // Changed loop conditions and added 'let'
-                const inputId = inputs[i].getAttribute("id").replace("cb-", ""); // Corrected getting input ID
-
-                if (parseInt(inputId) < parseInt(id)) {
-
-                    if (inputs[i].checked) {
-
-                        return;
-                    } else {
-                        inputs[i].checked = true;
-                        add_lt(inputs[i]);
-                        executeInBackground(inputId, inputs[i]);
-
-                    }
-                }
-            }
-
-        }
-
-
-    }
-    </script>
 
 </body>
 

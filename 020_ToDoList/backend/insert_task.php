@@ -4,7 +4,7 @@ if(isset($_GET["value"])){
     $value = $_GET["value"];
     $day = date("Y-m-d");
     $location = "location:/PHP/020_ToDoList/pages/today.php";
-    if (isset($_GET['date'])){
+    if ($_GET['date'] != $day){
         $day = $_GET['date'];
         $location = "location:/PHP/020_ToDoList/pages/tomorrow.php";
     }
